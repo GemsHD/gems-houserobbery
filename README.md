@@ -8,7 +8,7 @@ I've written this script for the CGH RP server at https://discord.gg/cgh2022 wel
 If you make any improvements feel free to put in a PR :)
 
 
-Add the below to your init.lua for qb-target
+Add the below to your Config.peds in init.lua for qb-target
 
 	{
 		model = "g_m_y_korean_01",
