@@ -29,3 +29,12 @@ Add the below to your init.lua for qb-target
            distance = 2.5
         }
 	},
+
+
+If using Renewed-Weaponscarry you can add this below code to your local props in the main.lua file and the players will hold the television/microwave they rob from properties
+
+  ["television"] =  { carry = true, model = "prop_tv_flat_02", bone = 28422, x = 0.0, y = -0.1, z = 0.1, xr = 0.0,
+  yr = 0.0, zr = -0.0, blockAttack = true, blockCar = true, blockRun = true },
+  ["microwave"] =  { carry = true, model = "prop_micro_02", bone = 28422, x = 0.0, y = -0.1, z = 0.03, xr = 0.0,
+  yr = 0.0, zr = -0.0, blockAttack = true, blockCar = true, blockRun = true },
+  television
