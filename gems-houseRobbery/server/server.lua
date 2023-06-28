@@ -124,7 +124,9 @@ RegisterNetEvent("gems-houserobbery:server:AddItem", function(item, amount)
     local Player = QBCore.Functions.GetPlayer(src)
     Player.Functions.AddItem(item, amount)
 	TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], "add", amount)
-    exports['gems-jewels']:DropJewels(src)
+    if Config.isCGH then
+        exports['gems-jewels']:DropJewels(src)
+    end
 end)
 
 RegisterNetEvent("gems-houserobbery:server:RemoveItem", function(item, amount)
@@ -157,9 +159,11 @@ RegisterNetEvent('gems-houserobbery:server:rewards', function (group, propertyTo
         [2] = 1.25 -- 500
     }
     local cashReward = 400 * rewardMultiplier[groupSize]
-    local hasLuck = exports['ps-buffs']:HasBuff('luck')
-    if hasLuck then
-        cashReward = cashReward + 400
+    if Config.psbuffs then
+        local hasLuck = exports['ps-buffs']:HasBuff('luck')
+        if hasLuck then
+            cashReward = cashReward + 400
+        end
     end
     for _, v in pairs(groupList) do
         local Player = QBCore.Functions.GetPlayer(v)
