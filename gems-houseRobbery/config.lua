@@ -6,6 +6,10 @@ Config.HighEndDropChance = 4
 
 Config.AmountToSteal = 5
 
+Config.psbuffs = false
+
+Config.isCGH = false
+
 Config.stages = {
     [1] = {name = "Drive to the house", isDone = false, id=1},
     [2] = {name = "Break into the house", isDone = false, id=2},
